@@ -1,0 +1,15 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.20.0",
+    "solc": "^0.8.19"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1",
+    "@openzeppelin/test-helpers": "^0.5.16",
+    "big.js": "^6.2.1",
+    "dotenv": "^16.4.4",
+    "web3": "^4.5.0"
+  }
+}
