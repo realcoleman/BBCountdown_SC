@@ -19,6 +19,7 @@ contract BBCountDown is ReentrancyGuard, Blacklist {
     event OnBid(address indexed author, uint256 amount);
     event OnWin(address indexed author, uint256 amount);
     event OnDeposit(address indexed admin, uint256 amount);
+    event OnChangeAdmin(address indexed oldAdmin, address indexed newAdmin);
 
     uint32 public endDelay = 69; // default 69 seconds
     uint256 public coolDownTime = 300; // default 5 mins
@@ -32,6 +33,12 @@ contract BBCountDown is ReentrancyGuard, Blacklist {
 
     function deposit() external payable onlyAdmin {
         emit OnDeposit(msg.sender, msg.value);
+    }
+
+    function changeAdmin(address _newAdmin) external onlyAdmin {
+        require(_newAdmin != address(0), "New admin address cannot be zero address");
+        emit OnChangeAdmin(admin, _newAdmin);
+        admin = _newAdmin;
     }
 
     function participate() external payable {

@@ -33,6 +33,11 @@ module.exports = {
       gas: 'auto',
       gasPrice: 'auto',
     },
+    polygon: {
+      url: 'https://polygon.drpc.org',
+      accounts: [`0x` + process.env.PRIVATE_KEY],
+      gas: 'auto',
+    },
     goerli: {
       url: `https://eth-goerli.g.alchemy.com/v2/6VIk-hwmxSKdcxCMiZPKqE4P0mprIa3w`,
       accounts: {
