@@ -90,6 +90,7 @@ contract BBCountDown is ReentrancyGuard, Blacklist {
     }
 
     function setTreasuryAddress(address _treasuryAddress) external onlyAdmin {
+        require(_treasuryAddress != address(0), "New TreasuryAddress address cannot be zero address");
         treasuryAddress = _treasuryAddress;
     }
 
