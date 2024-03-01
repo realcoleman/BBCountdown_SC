@@ -7,7 +7,7 @@
 const hre = require('hardhat');
 
 async function main() {
-  const treasureyAddress = '0xE34970b753eB1BB58320C48560B9e5D4CB5Fb3e3';
+  const treasureyAddress = '0x7C0Bc11E875F7f8F9fAa40153a29a3bacdd35D5C';
   const lock = await hre.ethers.deployContract('BBCountDown', [
     treasureyAddress,
   ]);

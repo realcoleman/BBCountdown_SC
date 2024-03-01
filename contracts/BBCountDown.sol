@@ -2,7 +2,7 @@
 pragma solidity ^0.8.24;
 
 // Uncomment this line to use console.log
-import "hardhat/console.sol";
+// import "hardhat/console.sol";
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/utils/Address.sol";
@@ -22,9 +22,9 @@ contract BBCountDown is ReentrancyGuard, Blacklist {
     event OnChangeAdmin(address indexed oldAdmin, address indexed newAdmin);
 
     uint32 public endDelay = 69; // default 69 seconds
-    uint256 public coolDownTime = 300; // default 5 mins
+    uint256 public coolDownTime = 120; // default 2 mins
     uint256 public nextStartTime = 0;
-    uint256 public bidAmount = 10000000000000000;
+    uint256 public bidAmount = 1000000000000000000;
 
     constructor(address _treasuryAddress)  {
         admin = msg.sender;

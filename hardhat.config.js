@@ -34,7 +34,7 @@ module.exports = {
       gasPrice: 'auto',
     },
     polygon: {
-      url: 'https://polygon.drpc.org',
+      url: 'https://polygon-rpc.com/',
       accounts: [`0x` + process.env.PRIVATE_KEY],
       gas: 'auto',
     },
